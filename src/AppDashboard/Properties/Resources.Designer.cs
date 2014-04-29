@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AppDashboard {
+namespace AppDashboard.Properties {
     using System;
     
     
@@ -22,24 +22,24 @@ namespace AppDashboard {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class WebResources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal WebResources() {
+        internal Resources() {
         }
         
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AppDashboard.WebResources", typeof(WebResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AppDashboard.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace AppDashboard {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -64,11 +64,27 @@ namespace AppDashboard {
         ///   Looks up a localized string similar to 
         ///(function () {
         ///
-        ///    alert(&quot;Hello&quot;);
+        ///    var ViewModel = function() {
         ///
-        ///})();.
+        ///        this.messages = ko.observableArray();
+        ///        this.connected = ko.observable(false);
+        ///    }
+        ///
+        ///    ViewModel.prototype = {
+        ///
+        ///        initialise: function () {
+        ///
+        ///            var self = this;
+        ///
+        ///            self.dashHub = $.connection.dashboardHub;
+        ///
+        ///            self.dashHub.client.logMessage = function (message, isError) {
+        ///                self.messages.splice(0, 0, message);
+        ///            };
+        ///
+        ///            $.connection.hub.start().done(funct [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string dashboard {
+        public static string dashboard {
             get {
                 return ResourceManager.GetString("dashboard", resourceCulture);
             }
@@ -80,18 +96,30 @@ namespace AppDashboard {
         ///&lt;head&gt;
         ///    &lt;title&gt;Application Dashboard&lt;/title&gt;
         ///
-        ///    &lt;!-- Latest compiled and minified CSS --&gt;
+        ///    &lt;!-- JQuery --&gt;
+        ///    &lt;script src=&quot;https://code.jquery.com/jquery-1.11.0.min.js&quot;&gt;&lt;/script&gt;
+        ///
+        ///    &lt;!-- Bootstrap --&gt;
         ///    &lt;link rel=&quot;stylesheet&quot; href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css&quot;&gt;
-        ///
-        ///    &lt;!-- Optional theme --&gt;
         ///    &lt;link rel=&quot;stylesheet&quot; href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css&quot;&gt;
+        ///    &lt;script src=&quot;//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
         ///
-        ///    &lt;!-- Latest compiled and minified JavaScript --&gt;
-        ///    &lt;script src=&quot;//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js&quot;&gt;&lt;/scr [rest of string was truncated]&quot;;.
+        ///    &lt; [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string index_html {
+        public static string index {
             get {
-                return ResourceManager.GetString("index.html", resourceCulture);
+                return ResourceManager.GetString("index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 
+        ///
+        ///.
+        /// </summary>
+        public static string styles {
+            get {
+                return ResourceManager.GetString("styles", resourceCulture);
             }
         }
     }
