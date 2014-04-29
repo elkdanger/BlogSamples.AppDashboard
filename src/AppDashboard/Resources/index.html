@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Application Dashboard</title>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <!-- Knockout -->
+    <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js"></script>
+
+    <!-- SignalR -->
+    <script src="http://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-2.0.2.min.js"></script>
+    <script src="signalr/hubs"></script>
+
+</head>
+<body>
+    <section class="container" style="max-width: 1024px">
+        
+        <h1>Application Dashboard</h1>
+
+        <div class="row">
+
+            <div class="col-md-8">
+                <h3>Log file <small data-bind ="visible: connected">Connected</small></h3>
+
+                <ul id="log-container" class="list-unstyled" data-bind="foreach: messages">
+                    <li data-bind="text: $parent.formatMessage($data)"></li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-4">
+                <h3>Some graphs and stuff</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>
